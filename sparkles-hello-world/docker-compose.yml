@@ -6,11 +6,11 @@ services:
     environment:
       - PUID=1000
       - PGID=1000
-      - TZ=Etc/UTC
+      - TZ=Asia/Kolkata
     volumes:
       - /path/to/radarr/data:/config
-      - /path/to/movies:/movies #optional
-      - /path/to/download-client-downloads:/downloads #optional
+      - /home/umbrel/umbrel/data/storage/downloads/movies/:/movies #optional
+      - /home/umbrel/umbrel/data/storage/downloads/qbit:/home/umbrel/umbrel/data/storage/downloads/qbit #optional
     ports:
-      - 7878:7878
+      - 7879:7878
     restart: unless-stopped
