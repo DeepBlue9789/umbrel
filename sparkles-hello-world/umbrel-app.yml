@@ -1,18 +1,15 @@
 manifestVersion: 1
-id: sparkles-hello-world
-name: Hello World
-tagline: Replace this tagline with your app's tagline
+id: radarr-custom
+name: Radarr
+tagline: Radarr for all
 icon: https://svgur.com/i/mvA.svg
-category: Development
+category: Stable
 version: "1.0.0"
 port: 4000
 description: >-
-  Add your app's description here.
+Super description
 
-
-  You can also add newlines!
-
-developer: Umbrel
+developer: DeepBlue
 website: https://umbrel.com
 submitter: Umbrel
 submission: https://github.com/getumbrel/umbrel-hello-world-app
@@ -23,7 +20,7 @@ gallery:
   - https://i.imgur.com/yyVG0Jb.jpeg
   - https://i.imgur.com/yyVG0Jb.jpeg
 releaseNotes: >-
-  Add what's new in the latest version of your app here.
+  Nothing new
 dependencies: []
 path: ""
 defaultUsername: ""
