@@ -1,14 +1,16 @@
-version: "3.7"
-
+---
 services:
-
-  app_proxy:
+  radarr:
+    image: lscr.io/linuxserver/radarr:latest
+    container_name: radarr
     environment:
-      # The format here is: <app-id>_<docker-service-name>_1
-      APP_HOST: sparkles-hello-world_server_1
-      APP_PORT: 3000
-    
-  server:
-    image: getumbrel/community-app-store-hello-world:latest
-    user: "1000:1000"
-    init: true
+      - PUID=1000
+      - PGID=1000
+      - TZ=Etc/UTC
+    volumes:
+      - /path/to/radarr/data:/config
+      - /path/to/movies:/movies #optional
+      - /path/to/download-client-downloads:/downloads #optional
+    ports:
+      - 7878:7878
+    restart: unless-stopped
